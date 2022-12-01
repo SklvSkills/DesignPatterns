@@ -9,7 +9,7 @@ protocol DisplayDelegate {
 // Message
 
 class Message {
-    let text: String
+    private let text: String
     var delegate: DisplayDelegate?
     
     init(_ text: String) {
