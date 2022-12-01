@@ -153,6 +153,6 @@ class Client {
     }
 }
 
-// Client.run()
+// Client().run()
 
 // House: ["stone walls", "iron doors", "plastic windows", "stone roof", "stone garage"]
