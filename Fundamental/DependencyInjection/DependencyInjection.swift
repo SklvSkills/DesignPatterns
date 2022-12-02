@@ -10,7 +10,7 @@ protocol Game {
 
 class Chess: Game {
     func start(player: String) {
-        print(player + " started playing chess.")
+        print("\(player) started playing chess.")
     }
 }
 
