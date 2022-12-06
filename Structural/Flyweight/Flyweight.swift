@@ -4,7 +4,7 @@
 
 import UIKit
 
-// Char Image
+// Char image
 
 class CharImage {
     func render(_ char: Character, fontName: String, fontSize: CGFloat) -> UIImage {
@@ -14,7 +14,7 @@ class CharImage {
     }
 }
 
-// Flyweight Factory
+// Flyweight factory
 
 class CharImageFactory {
     private struct ID: Hashable {
