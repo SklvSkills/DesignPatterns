@@ -2,7 +2,7 @@
 //  Mediator
 //
 
-// Chat User
+// Chat user
 
 protocol ChatUser: AnyObject {
     func enter(chat: Chat)
