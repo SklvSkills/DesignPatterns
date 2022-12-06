@@ -18,7 +18,7 @@ class MathSubject: Math {
     func mul(_ a: Int, _ b: Int) -> Int { a * b }
 }
 
-// Logging Proxy
+// Logging proxy
 
 class LoggingMathProxy: Math {
     private let math = MathSubject()
