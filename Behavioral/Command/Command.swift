@@ -2,7 +2,7 @@
 //  Command
 //
 
-// Toggle Switch
+// Toggle switch
 
 enum State: String {
     case on, off
