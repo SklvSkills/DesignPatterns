@@ -32,13 +32,19 @@ class Branch: Composite {
     private lazy var components = [Component]()
     
     func add(_ component: Component) {
+        guard !components.contains(where: { $0 === component }) else {
+            return
+        }
+        
         components.append(component)
     }
     
     func remove(_ component: Component) {
-        while let index = components.firstIndex(where: { $0 === component }) {
-            components.remove(at: index)
+        guard let index = components.firstIndex(where: { $0 === component }) else {
+            return
         }
+        
+        components.remove(at: index)
     }
     
     func getComponents() -> [Component] {
