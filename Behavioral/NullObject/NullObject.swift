@@ -42,19 +42,19 @@ class CompanyServer: MailServer {
         return contact
     }()
     
-    private lazy var contacts = [Contact]()
+    private lazy var contacts = [String: Contact]()
     
     func add(contact: Contact) {
         contact.mailServer = self
-        contacts.append(contact)
+        contacts[contact.email] = contact
     }
     
     private func getContact(by email: String) -> Contact {
-        for contact in contacts where contact.email == email {
-            return contact
+        guard let contact = contacts[email] else {
+            return nullObject
         }
         
-        return nullObject
+        return contact
     }
     
     func send(_ message: String, from email1: String, to email2: String) {
